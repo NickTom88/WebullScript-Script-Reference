@@ -1,0 +1,444 @@
+Here's the link to the original Reddit post:
+https://www.reddit.com/r/Webull/comments/1r1lwhh/webull_script_reference/
+
+---
+
+# WebullScript Complete Reference Guide
+
+## Overview
+
+This is the complete list of available functions and variables in WebullScript for creating custom indicators on the Webull platform.
+
+---
+
+## TECHNICAL INDICATORS (ind.)
+
+### Moving Averages
+
+- **ind.alma** - Arnaud Legoux Moving Average
+
+- **ind.ema** ⭐ - Exponential Moving Average
+
+- **ind.hma** - Hull Moving Average
+
+- **ind.rma** - Rolling Moving Average
+
+- **ind.sma** - Simple Moving Average
+
+- **ind.swma** - Symmetrically Weighted Moving Average
+
+- **ind.vwma** - Volume Weighted Moving Average
+
+- **ind.wma** - Weighted Moving Average
+
+### Oscillators & Momentum
+
+- **ind.atr** - Average True Range
+
+- **ind.cci** - Commodity Channel Index
+
+- **ind.cmo** - Chande Momentum Oscillator
+
+- **ind.macd** - MACD
+
+- **ind.mfi** - Money Flow Index
+
+- **ind.rsi** - Relative Strength Index
+
+- **ind.tsi** - True Strength Index
+
+### Bands & Channels
+
+- **ind.bb** - Bollinger Bands
+
+- **ind.kc** - Keltner Channels
+
+### Trend & Directional
+
+- **ind.dmi** - Directional Movement Index
+
+- **ind.down_trend** - Down Trend
+
+- **ind.up_trend** - Up Trend
+
+### Other Indicators
+
+- **ind.cog** - Center of Gravity
+
+- **ind.correlation** - Correlation
+
+---
+
+## MATH FUNCTIONS
+
+### Trigonometric
+
+- math.acos - Arc cosine
+
+- math.asin - Arc sine
+
+- math.atan - Arc tangent
+
+- math.cos - Cosine
+
+- math.sin - Sine
+
+- math.tan - Tangent
+
+### Basic Math
+
+- math.abs - Absolute value
+
+- math.ceil - Round up to nearest integer
+
+- math.floor - Round down to nearest integer
+
+- math.round - Round to nearest integer
+
+- math.sign - Returns sign of number (-1, 0, or 1)
+
+- math.pow - Power (x^y)
+
+- math.sqrt - Square root
+
+- math.exp - Exponential (e^x)
+
+- math.log - Natural logarithm
+
+- math.log10 - Base-10 logarithm
+
+### Comparison
+
+- math.max - Maximum of two values
+
+- math.min - Minimum of two values
+
+- **math.highest** ⭐ - Highest value over period
+
+- **math.lowest** ⭐ - Lowest value over period
+
+### Statistical
+
+- math.avg - Average
+
+- math.sum - Sum
+
+- math.cumsum - Cumulative sum
+
+- math.dev - Standard deviation
+
+- math.std - Standard deviation
+
+- math.variance - Variance
+
+- math.diff - Difference
+
+- math.stoch - Stochastic
+
+---
+
+## TIME FUNCTIONS
+
+### Current Time
+
+- time.current - Current timestamp
+
+- time.current_bar - Current bar timestamp
+
+- time.utc - UTC time
+
+### Time Extraction
+
+- time.get_day - Get day of month
+
+- time.get_hour - Get hour
+
+- time.get_minute - Get minute
+
+- time.get_month - Get month
+
+- time.get_week - Get week number
+
+- time.get_weekday - Get day of week
+
+- time.get_year - Get year
+
+### Day of Week Variables ⭐
+
+- time.monday
+
+- time.tuesday
+
+- time.wednesday
+
+- time.thursday
+
+- time.friday
+
+- time.saturday
+
+- time.sunday
+
+---
+
+## PRICE VARIABLES
+
+### Individual OHLC
+
+- **open** - Open price
+
+- **high** - High price
+
+- **low** - Low price
+
+- **close** - Close price
+
+### Calculated Prices
+
+- **hl2** - (high + low) / 2
+
+- **hlc3** - (high + low + close) / 3
+
+- **hlcc4** - (high + low + close + close) / 4
+
+- **ohlc4** - (open + high + low + close) / 4
+
+### Volume
+
+- **volume** ⭐ - Trading volume
+
+---
+
+## BAR CHECKING (bar_check.)
+
+### Bar State
+
+- bar_check.is_first - First bar in dataset
+
+- bar_check.is_last - Last bar in dataset
+
+- bar_check.is_new - New bar just formed
+
+- bar_check.is_historical - Historical bar (not real-time)
+
+- bar_check.is_real_time - Real-time bar
+
+- bar_check.is_last_update - Last update of current bar
+
+### Bar Position
+
+- bar_check.highest_offset - Offset to highest value
+
+- bar_check.lowest_offset - Offset to lowest value
+
+---
+
+## PLOTTING FUNCTIONS
+
+### Main Plot Function
+
+- **plt** - Main plotting function
+
+### Plot Types
+
+- plt.type_line - Line chart
+
+- plt.type_area - Area chart
+
+- plt.type_histogram - Histogram
+
+- plt.type_columns - Column chart
+
+- plt.type_circles - Circle markers
+
+- plt.type_cross - Cross markers
+
+- plt.type_linebr - Line with breaks
+
+- plt.type_stepline - Step line
+
+### Additional Plotting
+
+- plt.fill_between - Fill area between two lines
+
+---
+
+## HORIZONTAL LINES (hline.)
+
+### Line Types
+
+- hline.type_solid - Solid horizontal line
+
+- hline.type_dashed - Dashed horizontal line
+
+- hline.type_dotted - Dotted horizontal line
+
+---
+
+## COLORS
+
+### Standard Colors
+
+- color.aqua
+
+- color.black
+
+- color.blue
+
+- color.fuchsia
+
+- color.gray
+
+- color.green
+
+- color.lime
+
+- color.maroon
+
+- color.navy
+
+- color.olive
+
+- color.orange
+
+- color.purple
+
+- color.red
+
+- color.silver
+
+- color.teal
+
+- color.white
+
+- color.yellow
+
+### System Colors
+
+- color.sys_up - System up color (typically green)
+
+- color.sys_down - System down color (typically red)
+
+---
+
+## DEFINE FUNCTIONS
+
+### Variable Types
+
+- define.bool - Define boolean variable
+
+- define.float - Define float variable
+
+- define.integer - Define integer variable
+
+- define.source - Define price source variable
+
+- define.string - Define string variable
+
+---
+
+## CONTROL FLOW
+
+### Conditional
+
+- **iff** - If-then-else function (only conditional available)
+
+- Syntax: `iff(condition, value_if_true, value_if_false)`
+
+---
+
+## OTHER
+
+### Miscellaneous
+
+- fill_none - No fill
+
+- none - None/null value
+
+---
+
+## KEY LIMITATIONS ⚠️
+
+### Not Available in WebullScript:
+
+❌ **Arrays** - Cannot create or use arrays
+
+❌ **Loops** (for, while) - No iteration structures
+
+❌ **var keyword** - Cannot persist variables across bars
+
+❌ **Multiple conditions in if** - Only single `iff` function
+
+❌ **Custom functions** - Cannot define your own functions beyond what's provided
+
+❌ **Labels** - Cannot add text labels to chart
+
+❌ **Lines** - Cannot draw custom lines
+
+❌ **Strategy functions** - No strategy.entry, strategy.exit, etc.
+
+### What You CAN Do:
+
+✅ Calculate multiple indicators
+
+✅ Use mathematical operations
+
+✅ Plot multiple series with different colors/styles
+
+✅ Use time-based conditions
+
+✅ Access OHLC and volume data
+
+✅ Create conditional logic with iff
+
+✅ Use horizontal reference lines
+
+---
+
+## TIPS FOR WORKING WITHIN CONSTRAINTS
+
+**Instead of arrays:** Manually define each variable you need
+
+- Example: `ema1 = ind.ema(close, 5)`, `ema2 = ind.ema(close, 8)`, etc.
+
+**Instead of loops:** Write out each calculation explicitly
+
+- May be verbose but will work
+
+**Instead of var:** Use current bar values and reference prior bars if needed
+
+- Limited historical reference capabilities
+
+**Instead of complex if/else:** Nest multiple `iff` functions
+
+- Example: `iff(condition1, result1, iff(condition2, result2, result3))`
+
+**Color coding:** Use colors effectively to show different states
+
+- Bullish/bearish, above/below thresholds, etc.
+
+---
+
+## USE CASES FOR YOUR INDICATORS
+
+### EMA Ripster (Trend Following)
+
+- ✅ Can use: ind.ema for all EMAs
+
+- ✅ Can use: iff for color conditions
+
+- ✅ Can use: plt for plotting lines
+
+- ⚠️ Must manually define each EMA (no loop)
+
+### ORB (Opening Range Breakout)
+
+- ✅ Can use: time functions to identify market open
+
+- ✅ Can use: math.highest/lowest for range
+
+- ✅ Can use: day-of-week variables to skip weekends
+
+- ✅ Can use: volume for confirmation
+
+- ⚠️ Limited ability to "store" opening range across bars
